@@ -33,7 +33,7 @@ class Page extends Entity
     /**
      * @var string
      */
-    protected string $url = '';
+    protected string|null $url = '';
 
     /**
      * @var string
@@ -276,7 +276,7 @@ class Page extends Entity
      * @param $url
      * @return Page
      */
-    public function setUrl(string $propertyTitle, string $url): Page
+    public function setUrl(string $propertyTitle, string|null $url): Page
     {
         $this->set($propertyTitle, Url::value($url));
 
