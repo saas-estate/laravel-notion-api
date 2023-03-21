@@ -13,7 +13,7 @@ class Email extends Property implements Modifiable
      * @param $email
      * @return Email
      */
-    public static function value(string $email): Email
+    public static function value(string|null $email): Email
     {
         $emailProperty = new Email();
         $emailProperty->content = $email;
@@ -47,7 +47,7 @@ class Email extends Property implements Modifiable
     /**
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail(): string|null
     {
         return $this->content;
     }
