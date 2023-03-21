@@ -10,11 +10,11 @@ use FiveamCode\LaravelNotionApi\Entities\Contracts\Modifiable;
 class Number extends Property implements Modifiable
 {
     /**
-     * @var float|int
+     * @var float|int|null
      */
-    protected float $number = 0;
+    protected float|int|null $number = 0;
 
-    public static function value(float $number): Number
+    public static function value(float|int|null $number): Number
     {
         $numberProperty = new Number();
         $numberProperty->number = $number;
@@ -41,7 +41,7 @@ class Number extends Property implements Modifiable
     /**
      * @return float
      */
-    public function getContent(): float
+    public function getContent(): float|int
     {
         return $this->content;
     }
@@ -49,7 +49,7 @@ class Number extends Property implements Modifiable
     /**
      * @return float
      */
-    public function getNumber(): float
+    public function getNumber(): float|int|null
     {
         return $this->content;
     }
