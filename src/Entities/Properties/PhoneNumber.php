@@ -13,7 +13,7 @@ class PhoneNumber extends Property implements Modifiable
      * @param $phoneNumber
      * @return PhoneNumber
      */
-    public static function value(string $phoneNumber): PhoneNumber
+    public static function value(string|null $phoneNumber): PhoneNumber
     {
         $urlProperty = new PhoneNumber();
         $urlProperty->content = $phoneNumber;
@@ -39,7 +39,7 @@ class PhoneNumber extends Property implements Modifiable
     /**
      * @return string
      */
-    public function getContent(): string
+    public function getContent(): string|null
     {
         return $this->content;
     }
@@ -47,7 +47,7 @@ class PhoneNumber extends Property implements Modifiable
     /**
      * @return string
      */
-    public function getPhoneNumber(): string
+    public function getPhoneNumber(): string|null
     {
         return $this->content;
     }
