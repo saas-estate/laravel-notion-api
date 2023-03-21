@@ -228,7 +228,7 @@ class Page extends Entity
      * @param $number
      * @return Page
      */
-    public function setNumber(string $propertyTitle, float $number): Page
+    public function setNumber(string $propertyTitle, float|int|null $number): Page
     {
         $this->set($propertyTitle, Number::value($number));
 
@@ -252,7 +252,7 @@ class Page extends Entity
      * @param $text
      * @return Page
      */
-    public function setText(string $propertyTitle, string $text): Page
+    public function setText(string $propertyTitle, string|null $text): Page
     {
         $this->set($propertyTitle, Text::value($text));
 
@@ -264,7 +264,7 @@ class Page extends Entity
      * @param $name
      * @return Page
      */
-    public function setSelect(string $propertyTitle, string $name): Page
+    public function setSelect(string $propertyTitle, string|null $name): Page
     {
         $this->set($propertyTitle, Select::value($name));
 
@@ -288,7 +288,7 @@ class Page extends Entity
      * @param $phoneNumber
      * @return Page
      */
-    public function setPhoneNumber(string $propertyTitle, string $phoneNumber): Page
+    public function setPhoneNumber(string $propertyTitle, string|null $phoneNumber): Page
     {
         $this->set($propertyTitle, PhoneNumber::value($phoneNumber));
 
@@ -300,7 +300,7 @@ class Page extends Entity
      * @param $email
      * @return Page
      */
-    public function setEmail(string $propertyTitle, string $email): Page
+    public function setEmail(string $propertyTitle, string|null $email): Page
     {
         $this->set($propertyTitle, Email::value($email));
 
