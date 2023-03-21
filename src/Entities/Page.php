@@ -33,7 +33,7 @@ class Page extends Entity
     /**
      * @var string
      */
-    protected string|null $url = '';
+    protected string $url = '';
 
     /**
      * @var string
