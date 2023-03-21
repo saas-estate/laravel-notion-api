@@ -13,7 +13,7 @@ class Url extends Property implements Modifiable
      * @param $url
      * @return Url
      */
-    public static function value(string $url): Url
+    public static function value(string|null $url): Url
     {
         $urlProperty = new Url();
         $urlProperty->content = $url;
@@ -47,7 +47,7 @@ class Url extends Property implements Modifiable
     /**
      * @return string
      */
-    public function getUrl(): string
+    public function getUrl(): string|null
     {
         return $this->content;
     }
