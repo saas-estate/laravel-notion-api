@@ -28,7 +28,7 @@ class Select extends Property implements Modifiable
         $selectItem = new SelectItem();
         $selectItem->setName($name);
         $selectProperty->content = $selectItem;
-        $selectProperty->rawContent = null
+        $selectProperty->rawContent = ['select' => null];
         
         if (!empty($name)) {            
             $selectProperty->rawContent = [
