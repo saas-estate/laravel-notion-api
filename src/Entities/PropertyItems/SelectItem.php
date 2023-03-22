@@ -18,7 +18,7 @@ class SelectItem extends Entity
     /**
      * @var string
      */
-    protected string $name;
+    protected string|null $name;
 
     /**
      * @param  array  $responseData
@@ -66,7 +66,7 @@ class SelectItem extends Entity
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): string|null
     {
         return $this->name;
     }
