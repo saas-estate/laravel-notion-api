@@ -240,7 +240,7 @@ class Page extends Entity
      * @param $text
      * @return Page
      */
-    public function setTitle(string $propertyTitle, string $text): Page
+    public function setTitle(string $propertyTitle, string|null $text): Page
     {
         $this->set($propertyTitle, Title::value($text));
 
