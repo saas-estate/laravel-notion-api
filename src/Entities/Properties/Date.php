@@ -59,20 +59,25 @@ class Date extends Property implements Modifiable
 
         $dateProperty = new Date();
         $dateProperty->content = $richDate;
-
-        if ($richDate->isRange()) {
-            $dateProperty->rawContent = [
-                'date' => [
-                    'start' => $start->format('c'),
-                    'end' => $end->format('c'),
-                ],
-            ];
-        } else {
-            $dateProperty->rawContent = [
-                'date' => [
-                    'start' => $start->format('c'),
-                ],
-            ];
+        $dateProperty->rawContent = [
+            'date' => null,
+        ];
+        
+        if (!is_null($start)) {
+            if ($richDate->isRange()) {
+                $dateProperty->rawContent = [
+                    'date' => [
+                        'start' => $start->format('c'),
+                        'end' => $end->format('c'),
+                    ],
+                ];
+            } else {
+                $dateProperty->rawContent = [
+                    'date' => [
+                        'start' => $start->format('c'),
+                    ],
+                ];
+            }
         }
 
         return $dateProperty;
