@@ -30,7 +30,7 @@ class Text extends Property implements Modifiable
             $textProperty->plainText = $richText->getPlainText();
             $textProperty->content = $richText;
         } else {
-            $textProperty->plainText = $text->getPlainText();
+            $textProperty->plainText = $text?->getPlainText() ?? '';
             $textProperty->content = $text;
         }
 
@@ -41,7 +41,7 @@ class Text extends Property implements Modifiable
                 [
                     'type' => 'text',
                     'text' => [
-                        'content' => $richText->getPlainText(),
+                        'content' => isset($richText) ? $richText->getPlainText() : ''
                     ],
                 ],
             ],
