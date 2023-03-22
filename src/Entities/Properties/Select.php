@@ -21,7 +21,7 @@ class Select extends Property implements Modifiable
      * @param $name
      * @return Select
      */
-    public static function value(string $name): Select
+    public static function value(string|null $name): Select
     {
         $selectProperty = new Select();
 
