@@ -11,7 +11,7 @@ use Illuminate\Support\Arr;
  */
 class RichDate extends Entity
 {
-    protected DateTime $start;
+    protected ?DateTime $start;
     protected ?DateTime $end = null;
     protected bool $hasTime = false;
 
